@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+      <meta name="viewport" contet="width=device-width,initial-scale=1.0"
+    <title>RESUME BUILDER</title>
+  </head>
+  <body>
+    <header>
+      Resume builder
+    </header>
+
+      <a href="form.html"><img src="images/002.jpg" alt="profile icon"></a>
+    <section class="parent">
+    </section>
+
+
+  </body>
+</html>
+<script type="text/javascript" src="main.js">
+</script>
+<!-- service worker -->
+<script type="text/javascript">
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register("sw.js")
+      .then(function(register){
+      register.addEventListener('update found',function(){
+        var installingsw=register.installing;
+        console.log("serviceWorker is installing ",installingsw);
+      });
+    })
+    .catch(function(e){
+      console.log("error"+e);
+    });
+  }
+  else{
+  console.log("serviceWorker is not provided");
+  }
+</script>
